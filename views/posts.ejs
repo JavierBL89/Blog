@@ -1,0 +1,18 @@
+<%- include('Partials/header'); -%>
+
+
+ <p> <%= pageContent %> </p>
+
+  <form action="/posts/<%= pageTitle %>" method="post">
+    <button class="nextPost" type="submit" name="nextPost" value="<%= pageTitle %>" ><i class="fas fa-arrow-right fa-lg"></i> See next post</button>
+  </form>
+
+  <form action="/delete" method="post">
+    <button class="buttonDelete" type="submit" name="deletePost" value="<%= pageTitle %>" ><i class="fa fa-trash fa-lg" aria-hidden="true"></i> Delete this post</button>
+  </form>
+
+
+
+
+
+<%- include('Partials/footer'); -%>

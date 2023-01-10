@@ -1,0 +1,17 @@
+<%- include('Partials/header'); -%>
+
+
+<p> <%= pageContent %> </p>
+<a class="leavePost" href="/composse">Leave you post</a>
+
+
+<% posts.forEach(function(post){ %>
+  <h2> <%= post.title %> </h2>
+  <p> <%= post.content.substring(0, 100) + "... "; %>
+    <a href="/posts/<%= post.title %>">Read more</a>
+  </p>
+<% }); %>
+
+
+
+<%- include('Partials/footer'); -%>
